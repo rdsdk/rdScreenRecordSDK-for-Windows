@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenes>
+    <Scene>
+        <Chip Type="1" Source="\TipsImage\OperatingHints.png" CannotReuse="0" Visible="1" Paused="0">
+            <Rect W="1" X="0" Y="0" H="1"/>
+            <Clip L="0" R="0" B="0" T="0"/>
+        </Chip>
+    </Scene>
+</Scenes>

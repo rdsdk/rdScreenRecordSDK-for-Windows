@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameSelectDialog</class>
+ <widget class="QDialog" name="GameSelectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GameSelectDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*QRadioButton选择*/
+QRadioButton
+{
+	color: rgb(204, 204, 204);
+}
+
+QRadioButton:checked
+{
+	color: rgb(254, 161, 24);
+}
+
+QRadioButton::indicator:unchecked {
+	image: url(:/Radio/Resources/Radio_Normal.png);
+}
+
+QRadioButton::indicator:unchecked:Hover {
+	image: url(:/Radio/Resources/Radio_Hover.png);
+}
+
+QRadioButton::indicator:unchecked:disabled {
+	image: url(:/Radio/Resources/Radio_Disabled.png);
+}
+
+QRadioButton::indicator:unchecked:checked {
+	image: url(:/Radio/Resources//Radio_checked.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Radio/Resources//RadioChecked_Normal.png);
+}
+QRadioButton::indicator:checked:Hover {
+	image: url(:/Radio/Resources//RadioChecked_Hover.png);
+}
+
+QRadioButton::indicator:checked:disabled {
+	image: url(:/Radio/Resources//RadioChecked_Disabled.png);
+}
+
+QDialog
+{
+	border-image: url(:/Live/Resources/HandTour_Game.png);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+	background-color: rgb(33, 33, 33);
+}
+
+QScrollBar:vertical {
+    background: #111111;
+    width: 16px;
+    margin: 16px 0 16px 0;
+	
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 16px;
+	
+}
+
+QScrollBar::add-line:vertical {
+    background: #444444;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+	border-bottom-left-radius: 8px; 
+	border-bottom-right-radius: 8px;
+}
+
+QScrollBar::sub-line:vertical {
+    background: #444444;
+    height:  16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+	border-top-left-radius: 8px; 
+	border-top-right-radius: 8px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+	 
+}
+QScrollBar:down-arrow:vertical {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 4px;
+    background: #5f5f5f;
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}
+
+QScrollBar:up-arrow:vertical
+{
+	border: 1px solid #333333;
+    width: 8px;
+    height: 4px;
+    background: #5f5f5f;
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px; 
+}
+
+QScrollBar:up-arrow:vertical:hover
+{
+	background: #555555;
+}
+
+QScrollBar:down-arrow:vertical:hover
+{
+	background: #555555;
+}</string>
+     </property>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>1</y>
+        <width>441</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_2
+{
+	
+	background-color: rgb(43, 43, 43);
+}
+</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>8</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(234, 126, 24);</string>
+       </property>
+       <property name="text">
+        <string>选择游戏</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>8</y>
+         <width>15</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/SeedUI/Resources/SeedUI/SeedUI_Game.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Close_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>423</x>
+         <y>10</y>
+         <width>10</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>331</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(85, 85, 85);</string>
+      </property>
+      <property name="text">
+       <string>双击启动未打开的游戏或者将已经打开的游戏添加至直播窗口</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Refresh_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>35</y>
+        <width>83</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton#Refresh_pushButton
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/DownloadButton.png);
+	font:  12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+}
+
+QPushButton#Refresh_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/DownloadButton_H.png);
+}
+
+QPushButton#Refresh_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/DownloadButton_C.png);
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>刷新</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>331</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(85, 85, 85);</string>
+      </property>
+      <property name="text">
+       <string>如果未找到游戏，请在下拉框中选择</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>270</y>
+        <width>321</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/**********下拉列表**********/
+QComboBox {
+    background-color: black;
+    border: 1px solid #333333;
+    color: white;
+    padding:1px 2em 1px 3px;
+	font: 75 14px &quot;微软雅黑&quot;;
+	border-radius:5px;
+}
+QComboBox:hover {
+    background-color: rgb(24, 24, 24);
+    border: 1px solid #333333;
+    color: white;
+    padding:1px 2em 1px 3px;
+	font: 75 14px &quot;微软雅黑&quot;;
+	border-radius:5px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left: 1px solid #333333;
+	width: 25px;
+}/* 下拉按钮 */
+QComboBox::drop-down:hover {
+  	subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left: 1px solid #333333;
+	background-color: rgb(83, 83, 83);
+}/* 下拉按钮 鼠标移动 */
+QComboBox::down-arrow {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 5px;
+    background: rgb(83, 83, 83);
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}/* 下拉箭头 */
+QComboBox::down-arrow:hover {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 5px;
+    background: rgb(170, 170, 170);
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}/* 下拉箭头 鼠标移动 */
+QComboBox QAbstractItemView{
+	outline:0px;/*去掉虚线*/
+	color: rgb(209, 209, 209);
+	font: 75 14px &quot;微软雅黑&quot;;
+	background-color: rgb(43, 43, 43);
+	 selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}/* 下拉选择 */
+QComboBox QAbstractItemView::item{height:20px;}/*下拉选择高度*/</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Open_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>268</y>
+        <width>60</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#Open_pushButton
+{
+	font:  12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton#Open_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton#Open_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>打开</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>401</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget
+{
+background-color: rgb(33, 33, 33);
+border:px;
+}
+
+
+</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

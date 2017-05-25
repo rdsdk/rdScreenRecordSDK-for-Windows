@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>266</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AboutDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#AboutDialog
+{
+	
+	background-color: rgb(25, 25, 25);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+	
+	border-image: url(:/Live/Resources/PermissionPrompt.png);
+}</string>
+     </property>
+     <widget class="QPushButton" name="OK_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>225</x>
+        <y>220</y>
+        <width>60</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#OK_pushButton
+{
+	background-color: rgb(254, 161, 24);
+	font:  12px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+	
+}
+
+QPushButton#OK_pushButton:hover
+{
+	background-color: rgb(254, 181, 44);
+}
+
+QPushButton#OK_pushButton:checked
+{
+	background-color: rgb(254, 191, 54);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>确定</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>165</y>
+        <width>105</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(161, 161, 161);
+font: 75 14px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>问题反馈方式：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>165</y>
+        <width>75</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(161, 161, 161);
+font: 75 14px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>联系方式：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_label">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>10</y>
+        <width>32</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/ICON/Resources/HeadPortrait.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>48</y>
+        <width>251</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(254, 161, 24);
+font: 75 25px &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>锐动PC录屏SDK Demo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Close_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>502</x>
+        <y>7</y>
+        <width>10</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labAcceditLocalDays_2">
+      <property name="geometry">
+       <rect>
+        <x>264</x>
+        <y>168</y>
+        <width>16</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(254, 161, 24);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>131</x>
+        <y>80</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="labAcceditLocalDays">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(254, 161, 24);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labAcceditLiveDays">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(254, 161, 24);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScreenSelectDialog</class>
+ <widget class="QDialog" name="ScreenSelectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ScreenSelectDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/PC_Camera.png);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+	background-color: rgb(34, 36, 40);
+}
+</string>
+     </property>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>1</y>
+        <width>454</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_2
+{
+	
+	background-color: rgb(38, 40, 45);
+}</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>12</y>
+         <width>15</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/SeedUI/Resources/SeedUI/SeedUI_FullScreen.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>9</y>
+         <width>54</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(234, 126, 24);</string>
+       </property>
+       <property name="text">
+        <string>全屏录制</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Close_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>435</x>
+         <y>8</y>
+         <width>10</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>269</y>
+        <width>454</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_3
+{
+	
+	background-color: rgb(38, 40, 45);
+}</string>
+      </property>
+      <widget class="QPushButton" name="OK_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>15</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#OK_pushButton
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButtonYellow.png);
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-radius:5px;
+	
+}
+
+QPushButton#OK_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButtonYellow_H.png);
+}
+
+QPushButton#OK_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButtonYellow_C.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Cancel_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>15</y>
+         <width>60</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Cancel_pushButton
+{
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton#Cancel_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton#Cancel_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(85, 85, 85);
+font: 75 14px &quot;微软雅黑&quot;;</string>
+      </property>
+      <property name="text">
+       <string>显示器</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Screen_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>291</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/**********下拉列表**********/
+QComboBox {
+    background-color: black;
+    border: 1px solid #333333;
+    color: white;
+    padding:1px 2em 1px 3px;
+	font: 75 14px &quot;微软雅黑&quot;;
+	border-radius:5px;
+}
+QComboBox:hover {
+    background-color: rgb(24, 24, 24);
+    border: 1px solid #333333;
+    color: white;
+    padding:1px 2em 1px 3px;
+	font: 75 14px &quot;微软雅黑&quot;;
+	border-radius:5px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left: 1px solid #333333;
+	width: 25px;
+}/* 下拉按钮 */
+QComboBox::drop-down:hover {
+  	subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left: 1px solid #333333;
+	background-color: rgb(83, 83, 83);
+}/* 下拉按钮 鼠标移动 */
+QComboBox::down-arrow {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 5px;
+    background: rgb(83, 83, 83);
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}/* 下拉箭头 */
+QComboBox::down-arrow:hover {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 5px;
+    background: rgb(170, 170, 170);
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}/* 下拉箭头 鼠标移动 */
+QComboBox QAbstractItemView{
+	outline:0px;/*去掉虚线*/
+	color: rgb(209, 209, 209);
+	font: 75 14px &quot;微软雅黑&quot;;
+	background-color: rgb(43, 43, 43);
+	 selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}/* 下拉选择 */
+QComboBox QAbstractItemView::item{height:20px;}/*下拉选择高度*/</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>441</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(34, 36, 40);
+border:px groove gray;
+font: 75 13px &quot;宋体&quot;;
+color: rgb(85, 85, 85);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'宋体'; font-size:13px; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;提示：在win7系统中，除非你有明确需求，不然建议您使用录制窗口或者选择游戏，这两项对CPU消耗会低很多！&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Refresh_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>60</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#Refresh_pushButton
+{
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton#Refresh_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton#Refresh_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>刷新</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

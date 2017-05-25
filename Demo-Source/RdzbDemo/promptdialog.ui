@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PromptDialog</class>
+ <widget class="QDialog" name="PromptDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>341</width>
+    <height>221</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>提示</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+	
+	border-image: url(:/SeedUI/Resources/SeedUI/ExitTips.png);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+	background-color: rgb(33, 33, 33);
+}
+
+QRadioButton
+{
+	font: 75 14px &quot;微软雅黑&quot;;
+	
+	color: rgb(195, 195, 195);
+}
+
+
+
+/*QRadioButton选择*/
+QRadioButton
+{
+	
+}
+QRadioButton::indicator:unchecked {
+	image: url(:/Radio/Resources/Radio_Normal.png);
+}
+
+QRadioButton::indicator:unchecked:Hover {
+	image: url(:/Radio/Resources/Radio_Hover.png);
+}
+
+QRadioButton::indicator:unchecked:disabled {
+	image: url(:/Radio/Resources/Radio_Disabled.png);
+}
+
+QRadioButton::indicator:unchecked:checked {
+	image: url(:/Radio/Resources//Radio_checked.png);
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Radio/Resources//RadioChecked_Normal.png);
+}
+QRadioButton::indicator:checked:Hover {
+	image: url(:/Radio/Resources//RadioChecked_Hover.png);
+}
+
+QRadioButton::indicator:checked:disabled {
+	image: url(:/Radio/Resources//RadioChecked_Disabled.png);
+}</string>
+     </property>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>1</y>
+        <width>337</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_2
+{
+	
+	background-color: rgb(50, 50, 50);
+}</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>14</y>
+         <width>15</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/SeedUI/Resources/SeedUI/SeedUI_Prompt.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>10</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 15px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+       </property>
+       <property name="text">
+        <string>提示</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Close_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>321</x>
+         <y>6</y>
+         <width>10</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>178</y>
+        <width>336</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_3
+{
+	
+	background-color: rgb(50, 50, 50);
+}</string>
+      </property>
+      <widget class="QPushButton" name="OK_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#OK_pushButton
+{
+	background-color: rgb(254, 161, 24);
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+	
+}
+
+QPushButton#OK_pushButton:hover
+{
+	background-color: rgb(254, 181, 44);
+}
+
+QPushButton#OK_pushButton:checked
+{
+	background-color: rgb(254, 191, 54);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Cancel_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Cancel_pushButton
+{
+	background-color: rgb(20, 20, 20);
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+	
+}
+
+QPushButton#Cancel_pushButton:hover
+{
+	background-color: rgb(70, 70, 70);
+}
+
+QPushButton#Cancel_pushButton:checked
+{
+	background-color: rgb(0, 0, 0);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>201</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 15px &quot;微软雅黑&quot;;
+color: rgb(70, 70, 70);</string>
+      </property>
+      <property name="text">
+       <string>您点击了关闭按钮，您是想：</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Tray_radioButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>251</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>最小化到系统托盘，不退出程序</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Quit_radioButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>120</y>
+        <width>231</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>退出程序</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

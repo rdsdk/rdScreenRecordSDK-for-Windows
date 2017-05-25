@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AndroidSelectDialog</class>
+ <widget class="QDialog" name="AndroidSelectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>477</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AndroidSelectDialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+	
+	border-image: url(:/Live/Resources/HandTour_Game.png);
+	background-color: rgb(33, 33, 33);
+}</string>
+     </property>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>1</y>
+        <width>475</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_2
+{
+	
+	background-color: rgb(43, 43, 43);
+}
+</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>8</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(234, 126, 24);</string>
+       </property>
+       <property name="text">
+        <string>安卓直播</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>7</y>
+         <width>15</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/SeedUI/Resources/SeedUI/SeedUI_Adroid.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Close_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>455</x>
+         <y>10</y>
+         <width>10</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="Download_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>285</y>
+        <width>83</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#Download_pushButton
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/DownloadButton.png);
+	font:  12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+}
+
+QPushButton#Download_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/DownloadButton_H.png);
+}
+
+QPushButton#Download_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/DownloadButton_C.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>下载模拟器</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>50</y>
+        <width>371</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(85, 85, 85);
+background-color: rgb(34, 36, 40);
+border:px groove gray;
+font: 11pt &quot;宋体&quot;;
+</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'宋体'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt;1.首先需要安装一个安卓模拟器,在模拟器中安装并登陆游戏&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt;2.游戏画面打开后,点击添加即可开始录制Android。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt;  推荐模拟器如下：(注：点击下载模拟器可下载&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt;  蓝叠模拟器 (也可自行下载下列推荐模拟器))&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'SimSun';&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; color:#fea118;&quot;&gt;   蓝叠模拟器&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt;   	&lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; color:#fea118;&quot;&gt;51模拟器&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; color:#fea118;&quot;&gt;   靠谱助手模拟器	海马玩模拟器&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun';&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-family:'SimSun'; color:#fea118;&quot;&gt;网易MuMu	天天模拟器&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; color:#fea118;&quot;&gt;   猩猩安卓模拟器&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>38</y>
+        <width>93</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_3
+{
+	
+	background-color: rgb(43, 43, 43);
+}
+</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>93</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>93</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgb(43, 43, 43);
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(254, 161, 24);
+	border:px groove gray;
+}
+
+QPushButton:hover
+{
+	background-color: rgb(70, 70, 70);
+}
+
+QPushButton:checked
+{
+	background-color: rgb(33, 33, 33);
+}
+
+QPushButton:disabled
+{
+	background-color: rgb(33, 33, 33);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>模拟器</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="DownWindow_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>395</x>
+        <y>285</y>
+        <width>60</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#DownWindow_pushButton
+{
+	font:  12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton#DownWindow_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton#DownWindow_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>添加</string>
+      </property>
+     </widget>
+     <zorder>widget_2</zorder>
+     <zorder>widget_3</zorder>
+     <zorder>textBrowser</zorder>
+     <zorder>Download_pushButton</zorder>
+     <zorder>DownWindow_pushButton</zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

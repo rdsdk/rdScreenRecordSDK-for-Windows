@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChipItem</class>
+ <widget class="QWidget" name="ChipItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>284</width>
+    <height>45</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ChipItem</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QPushButton#butMiddle{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/butMiddle.png);
+}
+QPushButton#butMiddle:hover{
+	border-image:url(:/Resources/ItemToolbar/butMiddle_H.png);
+}
+QPushButton#butMiddle:disabled{
+	border-image:url(:/Resources/ItemToolbar/butMiddle_D.png);
+}
+
+
+QPushButton#butScaleFull{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/butScaleFull.png);
+}
+QPushButton#butScaleFull:hover{
+	border-image:url(:/Resources/ItemToolbar/butScaleFull_H.png);
+}
+QPushButton#butScaleFull:disabled{
+	border-image:url(:/Resources/ItemToolbar/butScaleFull_D.png);
+}
+
+
+QPushButton#chkLockAspect{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/chkLockAspect.png);
+}
+QPushButton#chkLockAspect:hover{
+	border-image:url(:/Resources/ItemToolbar/chkLockAspect_H.png);
+}
+QPushButton#chkLockAspect:disabled{
+	border-image:url(:/Resources/ItemToolbar/chkLockAspect_D.png);
+}
+QPushButton#chkLockAspect:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockAspect_C.png);
+}
+QPushButton#chkLockAspect:hover:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockAspect_H_C.png);
+}
+QPushButton#chkLockAspect:disabled:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockAspect_D_C.png);
+}
+
+QPushButton#chkLockPos{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/chkLockPos.png);
+}
+QPushButton#chkLockPos:hover{
+	border-image:url(:/Resources/ItemToolbar/chkLockPos_H.png);
+}
+QPushButton#chkLockPos:disabled{
+	border-image:url(:/Resources/ItemToolbar/chkLockPos_D.png);
+}
+QPushButton#chkLockPos:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockPos_C.png);
+}
+QPushButton#chkLockPos:hover:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockPos_H_C.png);
+}
+QPushButton#chkLockPos:disabled:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockPos_D_C.png);
+}
+
+QPushButton#chkLockSize{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/chkLockSize.png);
+}
+QPushButton#chkLockSize:hover{
+	border-image:url(:/Resources/ItemToolbar/chkLockSize_H.png);
+}
+QPushButton#chkLockSize:disabled{
+	border-image:url(:/Resources/ItemToolbar/chkLockSize_D.png);
+}
+QPushButton#chkLockSize:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockSize_C.png);
+}
+QPushButton#chkLockSize:hover:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockSize_H_C.png);
+}
+QPushButton#chkLockSize:disabled:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockSize_D_C.png);
+}
+
+QPushButton#chkLockAngle{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/chkLockAngle.png);
+}
+QPushButton#chkLockAngle:hover{
+	border-image:url(:/Resources/ItemToolbar/chkLockAngle_H.png);
+}
+QPushButton#chkLockAngle:disabled{
+	border-image:url(:/Resources/ItemToolbar/chkLockAngle_D.png);
+}
+QPushButton#chkLockAngle:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockAngle_C.png);
+}
+QPushButton#chkLockAngle:hover:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockAngle_H_C.png);
+}
+QPushButton#chkLockAngle:disabled:checked{
+	border-image:url(:/Resources/ItemToolbar/chkLockAngle_D_C.png);
+}
+
+
+QPushButton#chkHideChip{
+	border:none;
+	border-image:url(:/Resources/ItemToolbar/chkHideChip.png);
+}
+QPushButton#chkHideChip:hover{
+	border-image:url(:/Resources/ItemToolbar/chkHideChip_H.png);
+}
+QPushButton#chkHideChip:disabled{
+	border-image:url(:/Resources/ItemToolbar/chkHideChip_D.png);
+}
+QPushButton#chkHideChip:checked{
+	border-image:url(:/Resources/ItemToolbar/chkHideChip_C.png);
+}
+QPushButton#chkHideChip:hover:checked{
+	border-image:url(:/Resources/ItemToolbar/chkHideChip_H_C.png);
+}
+QPushButton#chkHideChip:disabled:checked{
+	border-image:url(:/Resources/ItemToolbar/chkHideChip_D_C.png);
+}
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="2">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QWidget" name="widget" native="true">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="chkHideChip">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton#chkHideChip{
+	
+	color: rgb(254, 161, 24);
+	border:none;
+	border-image: url(:/Chip_chkHide/Resources/Chip/chkHideChip.png);
+}
+QPushButton#chkHideChip:hover{
+	border-image:url(:/Chip_chkHide/Resources/Chip/chkHideChip_H.png);
+}
+QPushButton#chkHideChip:disabled{
+	border-image:url(:/Chip_chkHide/Resources/Chip/chkHideChip_D.png);
+}
+QPushButton#chkHideChip:checked{
+	border-image:url(:/Chip_chkHide/Resources/Chip/chkHideChip_C.png);
+}
+QPushButton#chkHideChip:hover:checked{
+	border-image:url(:/Chip_chkHide/Resources/Chip/chkHideChip_H_C.png);
+}
+QPushButton#chkHideChip:disabled:checked{
+	border-image:url(:/Chip_chkHide/Resources/Chip/chkHideChip_D_C.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_Revise_Txt">
+               <property name="minimumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+	border-image: url(:/RdzbDemo/Resources/Chip/Captions.png);
+}
+
+QPushButton:hover
+{
+	
+	border-image: url(:/RdzbDemo/Resources/Chip/Captions_H.png);
+}
+
+QPushButton:checked
+{
+	
+	border-image: url(:/RdzbDemo/Resources/Chip/Captions_D.png);
+}
+</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="butMiddle">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+QPushButton#butMiddle{
+	color: rgb(254, 161, 24);
+	border:none;
+	border-image: url(:/Chip_Middle/Resources/Chip/butMiddle.png);
+}
+QPushButton#butMiddle:hover{
+	border-image:url(:/Chip_Middle/Resources/Chip/butMiddle_H.png);
+}
+QPushButton#butMiddle:disabled{
+	border-image:url(:/Chip_Middle/Resources/Chip/butMiddle_D.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="butScaleFull">
+               <property name="minimumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton#butScaleFull{
+	color: rgb(254, 161, 24);
+	image: url(:/Chip_ScaleFull/Resources/Chip/butScaleFull.png);
+}
+QPushButton#butScaleFull:hover{
+	border-image: url(:/Chip_ScaleFull/Resources/Chip/butScaleFull_H.png);
+}
+QPushButton#butScaleFull:disabled{
+	border-image:url(:/Chip_ScaleFull/Resources/Chip/butScaleFull_D.png);
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labSourceName">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(255, 162, 0);
+font: 75 12px &quot;微软雅黑&quot;;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Up_Chip_pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton#Up_Chip_pushButton{
+	border:none;
+	border-image: url(:/Chip_Up/Resources/Chip/butUpChip.png);
+}
+QPushButton#Up_Chip_pushButton:hover{
+	border-image: url(:/Chip_Up/Resources/Chip/butUpChip_H.png);
+}
+QPushButton#Up_Chip_pushButton:disabled{
+	border-image: url(:/Chip_Up/Resources/Chip/butUpChip_D.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Down_Chip_pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton#Down_Chip_pushButton{
+	border:none;
+	border-image: url(:/Chip_Down/Resources/Chip/butDownChip.png);
+}
+QPushButton#Down_Chip_pushButton:hover{
+	border-image: url(:/Chip_Down/Resources/Chip/butDownChip_H.png);
+}
+QPushButton#Down_Chip_pushButton:disabled{
+	border-image: url(:/Chip_Down/Resources/Chip/butDownChip_D.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Close_Chip_pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton#Close_Chip_pushButton{
+	border:none;
+	border-image: url(:/Chip_Close/Resources/Chip/butCloseChip.png);
+}
+QPushButton#Close_Chip_pushButton:hover{
+	border-image: url(:/Chip_Close/Resources/Chip/butCloseChip_H.png);
+}
+QPushButton#Close_Chip_pushButton:disabled{
+	border-image: url(:/Chip_Close/Resources/Chip/butCloseChip_D.png);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="Move_widget" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>15</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>15</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QPushButton#butPlay{
+	border:none;
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butPlay.png);
+}
+QPushButton#butPlay:hover{
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butPlay_H.png);
+}
+QPushButton#butPlay:disabled{
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butPlay_D.png);
+}
+
+
+QPushButton#butPause{
+	border:none;
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butPause.png);
+}
+QPushButton#butPause:hover{
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butPause_H.png);
+}
+QPushButton#butPause:disabled{
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butPause_D.png);
+}
+
+QPushButton#butUsePlayRange{
+	border:none;
+	color: blue;
+}
+QPushButton#butSetPlayRange{
+	border:none;
+	color: blue;
+}
+
+QPushButton#butStop{
+	border:none;
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butStop.png);
+}
+QPushButton#butStop:hover{
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butStop_H.png);
+}
+QPushButton#butStop:disabled{
+	border-image:url(:/RdzbDemo/Resources/ItemOper/butStop_D.png);
+}
+
+QPushButton#chkMute{
+	border:none;
+	border-image:url(&quot;:/RdzbDemo/Resources/ItemOper/chkSpeaker.png&quot;);
+}
+QPushButton#chkMute:hover{
+	border-image:url(&quot;:/RdzbDemo/Resources/ItemOper/chkSpeaker_H.png&quot;);
+}
+QPushButton#chkMute:disabled{
+	border-image:url(&quot;:/RdzbDemo/Resources/ItemOper/chkSpeaker_D.png&quot;);
+}
+QPushButton#chkMute:checked{
+	border:none;
+	border-image:url(&quot;:/RdzbDemo/Resources/ItemOper/chkSpeaker_C.png&quot;);
+}
+QPushButton#chkMute:hover:checked{
+	border-image:url(&quot;:/RdzbDemo/Resources/ItemOper/chkSpeaker_H_C.png&quot;);
+}
+QPushButton#chkMute:disabled:checked{
+	border-image:url(&quot;:/RdzbDemo/Resources/ItemOper/chkSpeaker_D_C.png&quot;);
+}</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_4" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>15</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>15</height>
+              </size>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="widget_2" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>15</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>15</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <widget class="QPushButton" name="butPlay">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>15</width>
+                   <height>15</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>15</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>15</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="butPause">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>15</width>
+                   <height>15</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>15</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>15</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                </widget>
+                <zorder>butPause</zorder>
+                <zorder>butPlay</zorder>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="butStop">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>15</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>15</width>
+                  <height>15</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="CRangeSlider" name="widPlayProgress" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_5" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>65</width>
+               <height>15</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>15</height>
+              </size>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <property name="leftMargin">
+               <number>2</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="chkMute">
+                <property name="minimumSize">
+                 <size>
+                  <width>15</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>15</width>
+                  <height>15</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSlider">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>45</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>45</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QSlider  
+{  
+}  
+  
+QSlider::groove:horizontal  
+{  
+    height: 2px;  
+	border-image: url(:/Audio/Resources/Audio/VolumeTrack.png);
+    margin: 2px 0  
+}  
+
+ QSlider::sub-page:horizontal 
+{
+	height: 2px;  
+    border-image: url(:/Audio/Resources/Audio/VolumeProgress.png);
+	margin: 2px 0  
+}
+
+ QSlider::handle:horizontal {
+     width: 10px;
+	 height:5px;
+     margin: 5px px 5px px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere.png);
+     margin: -4 0px; /* expand outside the groove */
+ }
+
+ QSlider::handle:horizontal:hover {
+    width: 10px;
+	 height:5px;
+     margin: 5px px 5px px;    
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_H.png);
+     margin: -4 0px; /* expand outside the groove */
+ }
+
+QSlider::handle:horizontal:checked
+{
+	 width: 10px;
+	 height:5px;
+     margin: 5px px 5px px;   
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_C.png);
+     margin: -4 0px; /* expand outside the groove */
+}
+
+QSlider::handle:horizontal:disabled
+{
+	 width: 10px;
+	 height:5px;
+     margin: 5px px 5px px;    
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_D.png);
+      margin: -4 0px; /* expand outside the groove */
+}</string>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CRangeSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">crangeslider.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

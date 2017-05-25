@@ -1,0 +1,1821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RdzbDemoClass</class>
+ <widget class="QDialog" name="RdzbDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1051</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>锐动PC录屏SDK Demo</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#RdzbDemoClass
+{
+	
+	border-color: rgb(10, 10, 10);
+}
+
+QMessageBox {   border-color:#32435E; border-width:1px; border-radius: 3px;
+  min-width:30px; min-height:23px;
+  /*font-family:&quot;宋体&quot;;font-size:36px;*/
+ 
+	
+  height: 300px;
+  width: 200px;
+  border: none;}
+
+
+QScrollBar:vertical {
+    background-color: rgb(39, 40, 45);
+    width: 16px;
+    margin: 16px 0 16px 0;
+	
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 16px;
+	
+}
+
+QScrollBar::add-line:vertical {
+    background: #444444;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+	
+}
+
+QScrollBar::sub-line:vertical {
+    background: #444444;
+    height:  16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+	
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+	 
+}
+QScrollBar:down-arrow:vertical {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 4px;
+    background: #5f5f5f;
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}
+
+QScrollBar:up-arrow:vertical
+{
+	border: 1px solid #333333;
+    width: 8px;
+    height: 4px;
+    background: #5f5f5f;
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px; 
+}
+
+QScrollBar:up-arrow:vertical:hover
+{
+	background: #555555;
+}
+
+QScrollBar:down-arrow:vertical:hover
+{
+	background: #555555;
+}</string>
+  </property>
+  <widget class="QWidget" name="widget_3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-1</y>
+     <width>1051</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#widget_3
+{
+	
+}</string>
+   </property>
+   <widget class="QPushButton" name="Speaker_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>565</x>
+      <y>500</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>36</width>
+      <height>36</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton#Speaker_pushButton
+{
+	
+	border-image: url(:/Audio/Resources/Audio/Speaker.png);
+}
+
+QPushButton#Speaker_pushButton:hover
+{
+	
+	border-image: url(:/Audio/Resources/Audio/Speaker_H.png);
+}
+
+QPushButton#Speaker_pushButton:disabled{
+	
+	
+	border-image: url(:/Audio/Resources/Audio/Speaker_D.png);
+}
+
+QPushButton#Speaker_pushButton:checked
+{
+	
+	border-image: url(:/Audio/Resources/Audio/Speaker_C.png);
+}
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>0</y>
+      <width>721</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>721</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_2
+{
+	background-color: rgb(70, 70, 70);
+}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>1</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="TitleBarWidget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>720</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>720</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget#TitleBarWidget
+{
+	background-color: rgb(39, 40, 45);
+}</string>
+       </property>
+       <widget class="QLabel" name="Rdzb_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>15</y>
+          <width>32</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/ICON/Resources/HeadPortrait.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="slogan_label">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>161</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(223, 223, 223);
+font: 14px &quot;宋体&quot;;</string>
+        </property>
+        <property name="text">
+         <string>直播首选</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>0</y>
+          <width>73</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="Operate_pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>10</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>10</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#Operate_pushButton{
+	
+	border-image: url(:/UI/Resources/butSetting_Normal.png);
+}
+QPushButton#Operate_pushButton:hover{
+	
+	border-image: url(:/UI/Resources/butSetting_Hover.png);
+}
+QPushButton#Operate_pushButton:disabled{
+	
+	border-image: url(:/UI/Resources/butSetting_Disabled.png);
+}
+QPushButton#Operate_pushButton:checked{
+	
+	border-image: url(:/UI/Resources/butSetting_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Min_pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>11</width>
+             <height>11</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>11</width>
+             <height>11</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#Min_pushButton{
+	
+	border-image: url(:/Minimize/Resources/Minimize_Normal.png);
+}
+QPushButton#Min_pushButton:hover{
+	
+	border-image: url(:/Minimize/Resources/Minimize_Hover.png);
+}
+QPushButton#Min_pushButton:disabled{
+	
+	border-image: url(:/Minimize/Resources/Minimize_Disabled.png);
+}
+QPushButton#Min_pushButton:checked{
+	
+	border-image: url(:/Minimize/Resources/Minimize_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Close_pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>10</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>10</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>0</y>
+          <width>200</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="spacing">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="Rdzb_label_Normal1">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 149, 20);
+font: 75 22px &quot;黑体&quot;;</string>
+           </property>
+           <property name="text">
+            <string>锐动PC录屏SDK Demo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>720</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/UI/Resources/shadow.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CPreviewWnd" name="Preview_widget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>722</width>
+         <height>406</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>722</width>
+         <height>406</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(35, 36, 40);</string>
+       </property>
+       <widget class="QWidget" name="Add_widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>336</y>
+          <width>720</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton
+{
+	background-color: rgb(33, 34, 38);
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(156, 156, 156);
+	border: 0px;
+}
+
+QPushButton:hover
+{
+	color: rgb(254, 161, 24);
+}
+
+
+background-color: rgb(33, 34, 38);</string>
+        </property>
+        <widget class="QPushButton" name="Game_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border-image: url(:/heading/Resources/Game.png);
+}
+QPushButton:hover{
+	border-image: url(:/heading/Resources/Game_H.png);
+}
+QPushButton:checked{
+	border-image: url(:/heading/Resources/Game_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Display_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>275</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/Scope.png);
+}
+QPushButton:hover{
+	
+	
+	border-image: url(:/heading/Resources/Scope_H.png);
+}
+QPushButton:checked{
+	
+	
+	border-image: url(:/heading/Resources/Scope_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Android_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>275</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border-image: url(:/heading/Resources/Adroid.png);
+}
+QPushButton:hover{
+	
+	border-image: url(:/heading/Resources/Adroid_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/Adroid_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Windows_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/windows.png);
+}
+QPushButton:hover{
+	
+	border-image: url(:/heading/Resources/windows_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/windwos_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="IOS_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/bIOS.png);
+}
+QPushButton:hover{
+	
+	
+	border-image: url(:/heading/Resources/bIOS_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/bIOS_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Camera_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>555</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/Camera.png);
+}
+QPushButton:hover{
+	
+	border-image: url(:/heading/Resources/Camera_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/Camera_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="RTMP_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>205</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border-image: url(:/heading/Resources/Rtmp.png);
+}
+QPushButton:hover{
+	border-image: url(:/heading/Resources/Rtmp_H.png);
+}
+QPushButton:checked{
+	border-image: url(:/heading/Resources/Rtmp_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Video_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	border-image: url(:/heading/Resources/Movie_N.png);
+}
+QPushButton:hover{
+	border-image: url(:/heading/Resources/Movie_H.png);
+}
+QPushButton:checked{
+	border-image: url(:/heading/Resources/Movie_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="flash_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>350</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/Flash.png);
+}
+QPushButton:hover{
+	
+	border-image: url(:/heading/Resources/Flash_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/Flash_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="picture_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>485</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/Print.png);
+}
+QPushButton:hover{
+	
+	border-image: url(:/heading/Resources/Print_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/Print_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="captions_pushButton_select">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>20</y>
+           <width>30</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	
+	border-image: url(:/heading/Resources/Captions.png);
+}
+QPushButton:hover{
+	
+	border-image: url(:/heading/Resources/Captions_H.png);
+}
+QPushButton:checked{
+	
+	border-image: url(:/heading/Resources/Captions_C.png);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Video_label">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>50</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>视频</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Game_label">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>50</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>游戏</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="RTMP_label">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>50</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>RTMP</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Display_label">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>50</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>显示器</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Android_label">
+         <property name="geometry">
+          <rect>
+           <x>275</x>
+           <y>50</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>安卓</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="flash_label">
+         <property name="geometry">
+          <rect>
+           <x>345</x>
+           <y>50</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>flash</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="IOS_label">
+         <property name="geometry">
+          <rect>
+           <x>415</x>
+           <y>50</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>IOS</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Windows_label">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>50</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>窗口</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="picture_label">
+         <property name="geometry">
+          <rect>
+           <x>485</x>
+           <y>50</y>
+           <width>31</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>图片</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Camera_label">
+         <property name="geometry">
+          <rect>
+           <x>545</x>
+           <y>50</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>摄像头</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="captions_label">
+         <property name="geometry">
+          <rect>
+           <x>631</x>
+           <y>50</y>
+           <width>51</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>字幕</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>720</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/ICON/Resources/shadow1.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_4" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>720</width>
+         <height>82</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>720</width>
+         <height>82</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">	background-color: rgb(39, 40, 45);</string>
+       </property>
+       <widget class="QPushButton" name="Mobile_Game_pushButton">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>-1</y>
+          <width>80</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#Mobile_Game_pushButton
+{
+	color: rgb(159, 159, 159);
+	font: 14px &quot;微软雅黑&quot;;
+	border:1px groove gray;
+}
+
+QPushButton#Mobile_Game_pushButton:hover
+{
+	color: rgb(254, 161, 24);
+	background-color: rgb(50, 50, 50);
+}
+
+QPushButton#Mobile_Game_pushButton:checked
+{
+	color: rgb(254, 161, 24);
+	background-color: rgb(10, 10, 10);
+}</string>
+        </property>
+        <property name="text">
+         <string>手游直播</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PC_Live_pushButton">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>80</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#PC_Live_pushButton
+{
+	color: rgb(159, 159, 159);
+	font: 14px &quot;微软雅黑&quot;;
+	border:0px groove gray;
+}
+
+QPushButton#PC_Live_pushButton:hover
+{
+	color: rgb(254, 161, 24);
+	background-color: rgb(50, 50, 50);
+}
+
+QPushButton#PC_Live_pushButton:checked
+{
+	
+background-color: rgb(10, 10, 10);
+}</string>
+        </property>
+        <property name="text">
+         <string>PC直播</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Live_Begin_pushButton">
+        <property name="geometry">
+         <rect>
+          <x>285</x>
+          <y>20</y>
+          <width>160</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#Live_Begin_pushButton
+{
+	font: 75 16px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-image: url(:/Search/Resources/LIVE.png);
+}
+
+QPushButton#Live_Begin_pushButton:hover
+{
+	border-image: url(:/Search/Resources/LIVE_H.png);
+}
+
+QPushButton#Live_Begin_pushButton:checked
+{
+	border-image: url(:/Search/Resources/LIVE_C.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>开始直播</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Other_pushButton">
+        <property name="geometry">
+         <rect>
+          <x>159</x>
+          <y>-1</y>
+          <width>80</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#Other_pushButton
+{
+	color: rgb(159, 159, 159);
+	font: 14px &quot;微软雅黑&quot;;
+	border:1px groove gray;
+}
+
+QPushButton#Other_pushButton:hover
+{
+	color: rgb(254, 161, 24);
+	background-color: rgb(50, 50, 50);
+}
+
+QPushButton#Other_pushButton:checked
+{
+	color: rgb(254, 161, 24);
+	background-color: rgb(10, 10, 10);
+}</string>
+        </property>
+        <property name="text">
+         <string>其他</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Live_Quit_pushButton">
+        <property name="geometry">
+         <rect>
+          <x>285</x>
+          <y>20</y>
+          <width>160</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#Live_Quit_pushButton
+{
+	font: 75 16px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-image: url(:/Search/Resources/LIVE.png);
+}
+
+QPushButton#Live_Quit_pushButton:hover
+{
+	
+	border-image: url(:/Search/Resources/LIVE_H.png);
+}
+
+QPushButton#Live_Quit_pushButton:checked
+{
+	
+	border-image: url(:/Search/Resources/LIVE_C.png);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>停止直播</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>30</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>语言</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>225</x>
+          <y>0</y>
+          <width>331</width>
+          <height>82</height>
+         </rect>
+        </property>
+       </widget>
+       <zorder>widget_5</zorder>
+       <zorder>Mobile_Game_pushButton</zorder>
+       <zorder>PC_Live_pushButton</zorder>
+       <zorder>Live_Begin_pushButton</zorder>
+       <zorder>Other_pushButton</zorder>
+       <zorder>Live_Quit_pushButton</zorder>
+       <zorder>pushButton</zorder>
+      </widget>
+     </item>
+    </layout>
+    <zorder>widget_4</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>Preview_widget</zorder>
+    <zorder>TitleBarWidget</zorder>
+   </widget>
+   <widget class="QPushButton" name="MIC_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>500</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>36</width>
+      <height>36</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton#MIC_pushButton
+{
+	
+	border-image: url(:/Audio/Resources/Audio/MIC.png);
+}
+
+QPushButton#MIC_pushButton:disabled{
+	
+	
+	border-image: url(:/Audio/Resources/Audio/MIC_D.png);
+}
+
+QPushButton#MIC_pushButton:hover
+{
+	
+	border-image: url(:/Audio/Resources/Audio/MIC_H.png);
+}
+
+QPushButton#MIC_pushButton:checked
+{
+	
+	border-image: url(:/Audio/Resources/Audio/MIC_C.png);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="Speaker_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>565</x>
+      <y>330</y>
+      <width>36</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#Speaker_widget
+{
+	border-image: url(:/Search/Resources/AudioBackground.png);
+}</string>
+    </property>
+    <widget class="QPushButton" name="Checke_Speaker_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>150</y>
+       <width>13</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#Checke_Speaker_pushButton
+{
+	
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis.png);
+}
+
+QPushButton#Checke_Speaker_pushButton:hover
+{
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis_D.png);
+}
+
+QPushButton#Checke_Speaker_pushButton:checked
+{
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis_H.png);
+}
+
+QPushButton#Checke_Speaker_pushButton:checked:hover
+{
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis_H.png);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSlider" name="Speaker_verticalSlider">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>10</y>
+       <width>20</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider  
+{  
+   
+	
+	background-color: rgb(48, 50, 56);
+    border-style: outset;   
+}  
+  
+QSlider::groove:vertical  
+{  
+    width: 2px;  
+	border-image: url(:/Audio/Resources/Audio/VolumeProgress.png);
+    margin: 2px 0  
+}  
+
+ QSlider::sub-page:vertical 
+{
+    border-image: url(:/Audio/Resources/Audio/VolumeTrack.png);
+}
+
+ QSlider::handle:vertical {
+     height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere.png);
+     margin: 0 -4px; /* expand outside the groove */
+ }
+
+ QSlider::handle:vertical:hover {
+     height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_H.png);
+     margin: 0 -4px; /* expand outside the groove */
+ }
+
+QSlider::handle:vertical:checked
+{
+	 height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_C.png);
+     margin: 0 -4px; /* expand outside the groove */
+}
+
+QSlider::handle:vertical:disabled
+{
+	 height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_D.png);
+     margin: 0 -4px; /* expand outside the groove */
+}</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="Setting_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>673</x>
+      <y>500</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>36</width>
+      <height>36</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>36</width>
+      <height>36</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#Setting_pushButton{
+	
+	
+	border-image: url(:/Audio/Resources/Audio/Seeting.png);
+}
+QPushButton#Setting_pushButton:hover{
+	
+	
+	border-image: url(:/Audio/Resources/Audio/Seeting_H.png);
+}
+QPushButton#Setting_pushButton:disabled{
+	
+	
+	border-image: url(:/Audio/Resources/Audio/Seeting_D.png);
+}
+QPushButton#Setting_pushButton:checked{
+	
+	
+	border-image: url(:/Audio/Resources/Audio/Seeting_C.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Search_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>230</y>
+      <width>16</width>
+      <height>62</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#Search_pushButton{
+	border-top-left-radius:10;
+	border-bottom-left-radius:10;  
+	background-color: rgb(255, 164, 24);
+}
+QPushButton#Search_pushButton:hover{
+	background-color: rgb(255, 184, 44);
+}
+QPushButton#Search_pushButton:checked{
+	
+	background-color: rgb(255, 164, 24);
+}
+QPushButton#Search_pushButton:checked:hover{
+	background-color: rgb(255, 184, 44);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="MIC_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>330</y>
+      <width>36</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#MIC_widget
+{
+	border-image: url(:/Search/Resources/AudioBackground.png);
+}</string>
+    </property>
+    <widget class="QPushButton" name="Checke_MIC_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>150</y>
+       <width>13</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton#Checke_MIC_pushButton
+{
+	
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis.png);
+}
+
+QPushButton#Checke_MIC_pushButton:hover
+{
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis_D.png);
+}
+
+QPushButton#Checke_MIC_pushButton:checked
+{
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis_H.png);
+}
+
+QPushButton#Checke_MIC_pushButton:checked:hover
+{
+	border-image: url(:/Audio/Resources/Audio/SpeakerDis_H.png);
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSlider" name="MIC_verticalSlider">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>10</y>
+       <width>20</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider  
+{  
+   
+	
+	background-color: rgb(48, 50, 56);
+    border-style: outset;   
+}  
+  
+QSlider::groove:vertical  
+{  
+    width: 2px;  
+	border-image: url(:/Audio/Resources/Audio/VolumeProgress.png);
+    margin: 2px 0  
+}  
+
+ QSlider::sub-page:vertical 
+{
+    border-image: url(:/Audio/Resources/Audio/VolumeTrack.png);
+}
+
+ QSlider::handle:vertical {
+     height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere.png);
+     margin: 0 -4px; /* expand outside the groove */
+ }
+
+ QSlider::handle:vertical:hover {
+     height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_H.png);
+     margin: 0 -4px; /* expand outside the groove */
+ }
+
+QSlider::handle:vertical:checked
+{
+	 height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_C.png);
+     margin: 0 -4px; /* expand outside the groove */
+}
+
+QSlider::handle:vertical:disabled
+{
+	 height: 10px;
+	 width:5px;
+     margin: px 5px px 5px;  
+	 border-image: url(:/Audio/Resources/Audio/volume_sphere_D.png);
+     margin: 0 -4px; /* expand outside the groove */
+}</string>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Component_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>0</y>
+      <width>331</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>320</width>
+         <height>62</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="Line" name="line_3">
+          <property name="minimumSize">
+           <size>
+            <width>1</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>1</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 0, 0);</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="List_label">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>62</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>62</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">	background-color: rgb(39, 40, 45);</string>
+            </property>
+            <property name="lineWidth">
+             <number>1</number>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#ffa118;&quot;&gt;窗口列表&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>2</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>2</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 144, 0);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDragListWidget" name="listWidget">
+            <property name="minimumSize">
+             <size>
+              <width>320</width>
+              <height>493</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+
+QListWidget
+{
+outline:0px;
+background-color: rgb(39, 40, 45);
+border:px;
+}
+
+ QListView::item:hover
+{
+	background-color: rgb(40, 41, 46);
+}
+
+
+ QListView::item:selected 
+{
+background-color: rgb(35, 36, 40);
+}
+ QListView::item
+{
+	background-color: rgb(39, 40, 45);
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="minimumSize">
+          <size>
+           <width>1</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <zorder>widget_2</zorder>
+   <zorder>Setting_pushButton</zorder>
+   <zorder>Search_pushButton</zorder>
+   <zorder>Speaker_widget</zorder>
+   <zorder>MIC_widget</zorder>
+   <zorder>MIC_pushButton</zorder>
+   <zorder>Speaker_pushButton</zorder>
+   <zorder>Component_widget</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CPreviewWnd</class>
+   <extends>QWidget</extends>
+   <header location="global">cpreviewwnd.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QDragListWidget</class>
+   <extends>QListWidget</extends>
+   <header location="global">qdraglistwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingDialog</class>
+ <widget class="QDialog" name="SettingDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>505</width>
+    <height>299</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SettingDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#SettingDialog
+{
+	
+	
+	border-image: url(:/SeedUI/Resources/SeedUI/PC_Camera.png);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget_3
+{
+	background-color: rgb(47, 47, 47);
+}
+
+QCheckBox
+{
+	color: rgb(85, 85, 85);
+	font: 75 14px &quot;微软雅黑&quot;;
+	
+}
+
+QCheckBox::indicator:unchecked 
+{
+	image: url(:/SeedUI/Resources/SeedUI/NoCancel.png);
+}
+
+QCheckBox::indicator:checked 
+{
+	image: url(:/SeedUI/Resources/SeedUI/Cancel.png);
+}
+
+
+QCheckBox::indicator:unchecked:hover
+{
+	image: url(:/SeedUI/Resources/SeedUI/NoCancel_H.png);
+}
+
+QCheckBox::indicator:checked:hover
+{
+	image: url(:/SeedUI/Resources/SeedUI/Cancel_H.png);
+}</string>
+     </property>
+     <widget class="QPushButton" name="Cancel_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>262</y>
+        <width>60</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>413</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget
+{
+	background-color: rgb(20, 20, 20);
+}
+/**********下拉列表**********/
+QComboBox {
+    background-color: black;
+    border: 1px solid rgb(100, 100, 100);
+    color: white;
+    padding:1px 2em 1px 3px;
+	font: 75 14px &quot;微软雅黑&quot;;
+	border-radius:5px;
+}
+QComboBox:hover {
+    background-color: rgb(24, 24, 24);
+    border: 1px solid #333333;
+    color: white;
+    padding:1px 2em 1px 3px;
+	font: 75 14px &quot;微软雅黑&quot;;
+	border-radius:5px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left: 1px solid #333333;
+	width: 25px;
+}/* 下拉按钮 */
+QComboBox::drop-down:hover {
+  	subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left: 1px solid #333333;
+	background-color: rgb(83, 83, 83);
+}/* 下拉按钮 鼠标移动 */
+QComboBox::down-arrow {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 5px;
+    background: rgb(83, 83, 83);
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}/* 下拉箭头 */
+QComboBox::down-arrow:hover {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 5px;
+    background: rgb(170, 170, 170);
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}/* 下拉箭头 鼠标移动 */
+QComboBox QAbstractItemView{
+	outline:0px;/*去掉虚线*/
+	color: rgb(209, 209, 209);
+	font: 75 14px &quot;微软雅黑&quot;;
+	background-color: rgb(43, 43, 43);
+	 selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}/* 下拉选择 */
+QComboBox QAbstractItemView::item{height:20px;}/*下拉选择高度*/
+
+/*
+border-top-left-radius 设置左上角圆角; 
+border-top-right-radius 设置右上角圆角; 
+border-bottom-left-radius 设置左下角圆角; 
+border-bottom-right-radius 设置右下角圆角;
+*/
+
+/*********微调器********/
+QSpinBox {
+        border-top-left-radius:5px;
+		border-bottom-left-radius:5px;
+        height: 24px;
+        min-width: 40px;
+        border: 1px solid rgb(100, 100, 100);
+        background: rgb(20, 20, 20);
+}
+QSpinBox:enabled {
+        color: rgb(220, 220, 220);
+}
+QSpinBox:enabled:hover, QLineEdit:enabled:focus {
+        color: rgb(230, 230, 230);
+}
+QSpinBox:!enabled {
+        color: rgb(65, 65, 65);
+        background: transparent;
+}
+QPushButton
+{
+	background-color: rgb(40,40,40);
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(254, 161, 24);
+	border-radius:10px;
+	
+}
+
+QPushButton:hover
+{
+	background-color: rgb(50, 50, 50);
+	color: rgb(254, 181, 54);
+}
+
+QPushButton:checked
+{
+	background-color: rgb(60, 60, 60);
+}
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Video_page">
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>391</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <property name="horizontalSpacing">
+          <number>6</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(254, 161, 24);
+font: 70 14px &quot;黑体&quot;;</string>
+           </property>
+           <property name="text">
+            <string>帧率</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="FPS_comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>60</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>30</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>25</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>141</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(254, 161, 24);
+font: 70 14px &quot;黑体&quot;;</string>
+           </property>
+           <property name="text">
+            <string>码率</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="Bitrate_spinBox">
+           <property name="minimumSize">
+            <size>
+             <width>42</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 14px &quot;微软雅黑&quot;;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QCheckBox" name="Win7_Aero_checkBox">
+        <property name="geometry">
+         <rect>
+          <x>67</x>
+          <y>160</y>
+          <width>331</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox
+{
+	
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(80, 80, 80);
+}</string>
+        </property>
+        <property name="text">
+         <string>关闭Win7 Aero效果(降低资源占用，提高流畅度)</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>391</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>3</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(254, 161, 24);
+font: 70 14px &quot;黑体&quot;;</string>
+           </property>
+           <property name="text">
+            <string>分辨率</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="Resolution_comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <item>
+            <property name="text">
+             <string>1920x1080</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1280x720</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>1024x576</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>960x540</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>800x450</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>640x360</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>512x288</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>480x270</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QCheckBox" name="Win7_MOUSE_checkBox">
+        <property name="geometry">
+         <rect>
+          <x>67</x>
+          <y>130</y>
+          <width>331</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox
+{
+	
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(80, 80, 80);
+}</string>
+        </property>
+        <property name="text">
+         <string>允许录制鼠标指针</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Auido_page">
+       <widget class="QWidget" name="layoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>381</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_5">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 70 15px &quot;黑体&quot;;
+color: rgb(91, 91, 91);</string>
+           </property>
+           <property name="text">
+            <string>系统声音</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="Speaker_comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>293</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>293</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>381</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 70 15px &quot;黑体&quot;;
+color: rgb(91, 91, 91);</string>
+           </property>
+           <property name="text">
+            <string>麦克风选择</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="MIC_comboBox"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Live_page">
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>391</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QWidget#widget_4
+{
+ border: 1px solid #333333;
+}</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="horizontalSpacing">
+            <number>5</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>0</number>
+           </property>
+           <item row="1" column="3">
+            <widget class="QComboBox" name="File_comboBox">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>flv</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>mp4</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>avi</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="File_checkBox">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_11">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+             </property>
+             <property name="text">
+              <string>保存目录</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="label_14">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+             </property>
+             <property name="text">
+              <string>文件格式</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QPushButton" name="View_pushButton">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>查看</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_15">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+             </property>
+             <property name="text">
+              <string>文件分卷</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QSpinBox" name="File_spinBox">
+               <property name="minimumSize">
+                <size>
+                 <width>42</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>80</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximum">
+                <number>8192</number>
+               </property>
+               <property name="singleStep">
+                <number>256</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="styleSheet">
+                <string notr="true">font: 75 12px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+               </property>
+               <property name="text">
+                <string>MB</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLineEdit" name="File_lineEdit">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-width:  1px 40px 40px 40px ;
+border-radius : 4px;
+border-width: 1px;
+border-style: none;
+border:1px groove  rgb(50, 53, 59);border-radius:4px;
+
+font: 12px &quot;微软雅黑&quot;;
+color: rgb(166, 166, 166);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="browse_pushButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(240, 240, 240);
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton.png);
+}
+
+QPushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_H.png);
+}
+
+QPushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButton_C.png);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>浏览</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>391</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QWidget#widget_5
+{
+ border: 1px solid #333333;
+}</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="Rtmp_checkBox">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+             </property>
+             <property name="text">
+              <string>Rtmp流</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="Rtmp_lineEdit">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-width:  1px 40px 40px 40px ;
+border-radius : 4px;
+border-width: 1px;
+border-style: none;
+border:1px groove  rgb(50, 53, 59);
+
+font: 12px &quot;微软雅黑&quot;;
+color: rgb(166, 166, 166);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>391</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="styleSheet">
+            <string notr="true">font: 75 14px &quot;微软雅黑&quot;;
+color: rgb(255, 161, 24);</string>
+           </property>
+           <property name="text">
+            <string>标题</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="TiletelineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-width:  1px 40px 40px 40px ;
+border-radius : 4px;
+border-width: 1px;
+border-style: none;
+border:1px groove  rgb(50, 53, 59);border-radius:4px;
+font: 12px &quot;微软雅黑&quot;;
+color: rgb(166, 166, 166);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <zorder>layoutWidget</zorder>
+       <zorder>widget_4</zorder>
+       <zorder>widget_5</zorder>
+      </widget>
+      <widget class="QWidget" name="language_page">
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>381</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 16px &quot;黑体&quot;;
+color: rgb(254, 161, 24);</string>
+           </property>
+           <property name="text">
+            <string>语言</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="Language_comboBox">
+           <property name="minimumSize">
+            <size>
+             <width>280</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>49</y>
+        <width>90</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	background-color: rgb(47, 47, 47);
+	font: 75 14px &quot;微软雅黑&quot;;
+	color: rgb(254, 161, 24);
+	border:px groove gray;
+}
+
+QPushButton:hover
+{
+	background-color: rgb(70, 70, 70);
+}
+
+QPushButton:checked
+{
+	background-color: rgb(20, 20, 20);
+}
+
+QWidget#widget_2
+{
+	
+}
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(20, 20, 20);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Video_pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>视频</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Auido_pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>声音</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Live_pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>直播设置</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Langage_pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>89</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>语言</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(20, 20, 20);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>5</y>
+        <width>500</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>10</y>
+         <width>15</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/UI/Resources/butSetting_checked.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>5</y>
+         <width>71</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(254, 161, 24);
+font: 75 16px &quot;黑体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>参数设置</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Close_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>4</y>
+         <width>10</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="OK_pushButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>262</y>
+        <width>60</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#OK_pushButton
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButtonYellow.png);
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton#OK_pushButton:hover
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButtonYellow_H.png);
+}
+
+QPushButton#OK_pushButton:checked
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/SmallButtonYellow_C.png);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>确定</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

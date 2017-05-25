@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WindowsSelectDialog</class>
+ <widget class="QDialog" name="WindowsSelectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>298</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WindowsSelectDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*QRadioButton选择*/
+QRadioButton
+{
+	color: rgb(204, 204, 204);
+}
+
+QRadioButton:checked
+{
+	color: rgb(254, 161, 24);
+}
+
+QRadioButton::indicator:unchecked {
+	image: url(:/Radio/Resources/Radio_Normal.png);
+}
+
+QRadioButton::indicator:unchecked:Hover {
+	image: url(:/Radio/Resources/Radio_Hover.png);
+}
+
+QRadioButton::indicator:unchecked:disabled {
+	image: url(:/Radio/Resources/Radio_Disabled.png);
+}
+
+QRadioButton::indicator:unchecked:checked {
+	image: url(:/Radio/Resources//Radio_checked.png);
+	
+}
+
+QRadioButton::indicator:checked {
+	image: url(:/Radio/Resources//RadioChecked_Normal.png);
+}
+QRadioButton::indicator:checked:Hover {
+	image: url(:/Radio/Resources//RadioChecked_Hover.png);
+}
+
+QRadioButton::indicator:checked:disabled {
+	image: url(:/Radio/Resources//RadioChecked_Disabled.png);
+}
+
+QDialog
+{
+	border-image: url(:/SeedUI/Resources/SeedUI/PC_Camera.png);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>1</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#widget
+{
+	
+	background-color: rgb(43, 43, 43);
+}
+
+
+QScrollBar:vertical {
+    background: #111111;
+    width: 16px;
+    margin: 16px 0 16px 0;
+	
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    min-height: 16px;
+	
+}
+
+QScrollBar::add-line:vertical {
+    background: #444444;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+	border-bottom-left-radius: 8px; 
+	border-bottom-right-radius: 8px;
+}
+
+QScrollBar::sub-line:vertical {
+    background: #444444;
+    height:  16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+	border-top-left-radius: 8px; 
+	border-top-right-radius: 8px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+	 
+}
+QScrollBar:down-arrow:vertical {
+    border: 1px solid #333333;
+    width: 8px;
+    height: 4px;
+    background: #5f5f5f;
+	border-bottom-left-radius: 5px; 
+	border-bottom-right-radius: 5px; 
+}
+
+QScrollBar:up-arrow:vertical
+{
+	border: 1px solid #333333;
+    width: 8px;
+    height: 4px;
+    background: #5f5f5f;
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px; 
+}
+
+QScrollBar:up-arrow:vertical:hover
+{
+	background: #555555;
+}
+
+QScrollBar:down-arrow:vertical:hover
+{
+	background: #555555;
+}</string>
+     </property>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>1</y>
+        <width>454</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_2
+{
+	
+	background-color: rgb(53, 53, 53);
+}</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>13</y>
+         <width>15</width>
+         <height>14</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/SeedUI/Resources/SeedUI/SeedUI_windows.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>14</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(234, 126, 24);</string>
+       </property>
+       <property name="text">
+        <string>窗口选取</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Close_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>435</x>
+         <y>8</y>
+         <width>10</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Close_pushButton{
+	
+	border-image: url(:/Close/Resources/Close_Normal.png);
+}
+QPushButton#Close_pushButton:hover{
+	
+	border-image: url(:/Close/Resources/Close_Hover.png);
+}
+QPushButton#Close_pushButton:disabled{
+	
+	border-image: url(:/Close/Resources/Close_Disabled.png);
+}
+QPushButton#Close_pushButton:checked{
+	
+	border-image: url(:/Close/Resources/Close_checked.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>1</x>
+        <y>256</y>
+        <width>454</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget_3
+{
+	
+	background-color: rgb(53, 53, 53);
+}</string>
+      </property>
+      <widget class="QPushButton" name="OK_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#OK_pushButton
+{
+	background-color: rgb(254, 161, 24);
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+	
+}
+
+QPushButton#OK_pushButton:hover
+{
+	background-color: rgb(254, 181, 44);
+}
+
+QPushButton#OK_pushButton:checked
+{
+	background-color: rgb(254, 191, 54);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Cancel_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>10</y>
+         <width>60</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Cancel_pushButton
+{
+	background-color: rgb(20, 20, 20);
+	font: 75 12px &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+	border-radius:5px;
+	
+}
+
+QPushButton#Cancel_pushButton:hover
+{
+	background-color: rgb(70, 70, 70);
+}
+
+QPushButton#Cancel_pushButton:checked
+{
+	background-color: rgb(0, 0, 0);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>54</y>
+        <width>291</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(85, 85, 85);</string>
+      </property>
+      <property name="text">
+       <string>请勾选你需要选择的窗体，该窗口必须是非最小化状态</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="listWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>411</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget
+{
+background-color: rgb(43, 43, 43);
+border:px;
+}
+
+ QListView::item:hover 
+{
+	background-color: rgb(33, 33, 33);
+}</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rdzbdemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
