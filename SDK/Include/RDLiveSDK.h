@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 
-BOOL	WINAPI RDLive_Init( LPCWSTR szOrganizationName, LPCWSTR szApplicationName,
+BOOL	WINAPI RDLive_Init( LPCWSTR szOrganizationDir, LPCWSTR szApplicationDir,
 						   fnRenderNotifyCB pCbRender, fnEncoderNotifyCB pCbEncoder, LPVOID pCbParam );
 VOID	WINAPI RDLive_Uninit();
 
