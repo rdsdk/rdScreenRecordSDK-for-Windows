@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Effects>
+  <Actions>
+    <Action name="Bump Under Water" file="Bump Under Water.xml" />
+    <Action name="Cube Spin" file="Cube Spin.xml" />
+    <Action name="Louvre" file="Louvre.xml" />
+    <Action name="Flip" file="Flip.xml" />
+    <Action name="Fly In X" file="Fly In X.xml" />
+    <Action name="Fly In Y" file="Fly In Y.xml" />
+    <Action name="Fly In Z" file="Fly In Z.xml" />
+    <Action name="Fly Out X" file="Fly Out X.xml" />
+    <Action name="Fly Out Y" file="Fly Out Y.xml" />
+    <Action name="Fly Out Z" file="Fly Out Z.xml" />
+    <Action name="Roll In" file="Roll In.xml" />
+    <Action name="Roll Out" file="Roll Out.xml" />
+    <Action name="Rotate X" file="Rotate X.xml" />
+    <Action name="Rotate Y" file="Rotate Y.xml" />
+    <Action name="Rotate X with Zoom" file="Rotate X with Zoom.xml" />
+    <Action name="Rotate Y with Zoom" file="Rotate Y with Zoom.xml" />
+    <Action name="Wipe" file="Wipe.xml" />
+    <Action name="Wipe2" file="Wipe2.xml" />
+    <Action name="Wipe108" file="Wipe108.xml" />
+    <Action name="Wipe118" file="Wipe118.xml" />
+    <Action name="Wipe119" file="Wipe119.xml" />
+  </Actions>
+</Effects>

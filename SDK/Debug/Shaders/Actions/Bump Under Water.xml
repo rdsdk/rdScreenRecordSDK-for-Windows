@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Action loop="1" orderMode="2">
+  <KeyFrame time="0">
+    <First>
+      <Shader name="Water" enabled="1">
+        <ActionProgress value="0" />
+        <PeriodCount value="6" />
+        <Oscillation value="0.2" />
+        <OffsetCount value="0.0" />
+        <TextureRGBA2 value="0" />
+      </Shader>
+    </First>
+    <Second>
+      
+    </Second>
+  </KeyFrame>
+  <KeyFrame time="1.0" >
+    <First>
+      <Shader name="Water" enabled="1">
+        <ActionProgress value="1.0" />
+        <OffsetCount value="5.0" />
+        <Oscillation value="0.0" />
+      </Shader>
+    </First>
+    <Second>
+      
+    </Second>
+  </KeyFrame>
+</Action>

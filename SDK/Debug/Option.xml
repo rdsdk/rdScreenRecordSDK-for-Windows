@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Option Edition="20170321" Update="20170303">
+    <Base>
+        <ResolutionRatio Width="1280" SwapVH="0" Height="720" Group="Film">
+            <Film Str="16:9">
+                <Size Width="1920" Height="1080" Str="1920x1080"/>
+                <Size Width="1600" Height="900" Str="1600x900"/>
+                <Size Width="1280" Height="720" Str="1280x720"/>
+                <Size Width="1024" Height="576" Str="1024x576"/>
+                <Separator/>
+                <Size Width="960" Height="540" Str="960x540"/>
+                <Size Width="800" Height="450" Str="800x450"/>
+                <Size Width="640" Height="360" Str="640x360"/>
+                <Size Width="512" Height="288" Str="512x288"/>
+                <Separator/>
+                <Size Width="480" Height="270" Str="480x270"/>
+                <Size Width="400" Height="225" Str="400x225"/>
+                <Size Width="320" Height="180" Str="320x180"/>
+                <Size Width="256" Height="144" Str="256x144"/>
+            </Film>
+            <Television Str="4:3">
+                <Size Width="1920" Height="1440" Str="1920x1440"/>
+                <Size Width="1600" Height="1200" Str="1600x1200"/>
+                <Size Width="1280" Height="960" Str="1280x960"/>
+                <Size Width="1024" Height="768" Str="1024x768"/>
+                <Separator/>
+                <Size Width="960" Height="720" Str="960x720"/>
+                <Size Width="800" Height="600" Str="800x600"/>
+                <Size Width="640" Height="480" Str="640x480"/>
+                <Size Width="512" Height="384" Str="512x384"/>
+                <Separator/>
+                <Size Width="480" Height="360" Str="480x360"/>
+                <Size Width="400" Height="300" Str="400x300"/>
+                <Size Width="320" Height="240" Str="320x240"/>
+                <Size Width="256" Height="192" Str="256x192"/>
+            </Television>
+            <CIF Str="CIF">
+                <Size Width="1408" Height="1152" Str="1408x1152 (16CIF)"/>
+                <Size Width="704" Height="576" Str="704x576 (4CIF/D1)"/>
+                <Size Width="352" Height="288" Str="352x288 (CIF)"/>
+                <Size Width="176" Height="144" Str="176x144 (QCIF)"/>
+            </CIF>
+            <User Str="自定义"/>
+        </ResolutionRatio>
+        <PreviewScale Hardware="1" Scale="0.5">
+            <Scale val="1" Str="100%"/>
+            <Scale val="0.75" Str="75%"/>
+            <Scale val="0.5" Str="50%"/>
+            <Scale val="0.25" Str="25%"/>
+        </PreviewScale>
+        <FrameRatio Fps="25">
+            <Fps val="60" Str="60"/>
+            <Fps val="30" Str="30"/>
+            <Fps val="25" Str="25"/>
+            <Fps val="20" Str="20"/>
+            <Fps val="10" Str="10"/>
+        </FrameRatio>
+    </Base>
+    <Encoder>
+        <Video Enc="0">
+            <x264 Perset="5" Profile=""/>
+            <nvcuda Perset="5" Profile=""/>
+            <nvenc Perset="3" Profile=""/>
+            <intel Perset="" Profile=""/>
+            <Bitrate Vbv="2100" Bitrate="1400" RMode="1" Max="2100"/>
+            <FrameParams Gop="120" GopMin="0" BFrame="0" Ref="0"/>
+        </Video>
+        <Audio Enc="0">
+            <Samp Samp="22050" Bit="16" Str="22.05 khz 16bit"/>
+            <Samp Samp="44100" Bit="16" Str="44.10 khz 16bit"/>
+            <Samp Samp="48000" Bit="16" Str="48.00 khz 16bit"/>
+            <Samp Samp="22050" Bit="32" Str="22.05 khz 32bit"/>
+            <Samp Samp="44100" Bit="32" Str="44.10 khz 32bit"/>
+            <Samp Samp="48000" Bit="32" Str="48.00 khz 32bit"/>
+            <AudioParam Bits="32" Bitrate="96" Sample="44100" Channel="2"/>
+        </Audio>
+        <Save Title="" AdaptiveNetwork="0" File="0" Live="0">
+            <File Split="0" Dir="" Fmt="0"/>
+        </Save>
+    </Encoder>
+    <AuidoCapture>
+        <Speaker Volume="1" Mutex="0"/>
+        <Microphone Volume="1" Mutex="0"/>
+    </AuidoCapture>
+  <Function GameRec="0" CursorCapture="1" AutoAero="1">
+    
+  </Function>
+</Option>
